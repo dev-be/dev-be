@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#000000"/>
+      <stop offset="50%"  stop-color="#000d00"/>
+      <stop offset="100%" stop-color="#001500"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowStrong" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="200" fill="url(#bgGrad)"/>
+
+  <!-- Scanlines -->
+  <g opacity="0.055">
+    <rect width="900" height="1" y="20"  fill="#39FF14"/>
+    <rect width="900" height="1" y="40"  fill="#39FF14"/>
+    <rect width="900" height="1" y="60"  fill="#39FF14"/>
+    <rect width="900" height="1" y="80"  fill="#39FF14"/>
+    <rect width="900" height="1" y="100" fill="#39FF14"/>
+    <rect width="900" height="1" y="120" fill="#39FF14"/>
+    <rect width="900" height="1" y="140" fill="#39FF14"/>
+    <rect width="900" height="1" y="160" fill="#39FF14"/>
+    <rect width="900" height="1" y="180" fill="#39FF14"/>
+  </g>
+
+  <!-- Top border glow line -->
+  <rect width="900" height="2" y="0" fill="#39FF14" opacity="0.5" filter="url(#glow)"/>
+
+  <!-- Corner brackets — top left -->
+  <rect x="0"  y="0"  width="22" height="3"  fill="#39FF14" opacity="0.8"/>
+  <rect x="0"  y="0"  width="3"  height="22" fill="#39FF14" opacity="0.8"/>
+  <!-- Corner brackets — top right -->
+  <rect x="878" y="0"  width="22" height="3"  fill="#39FF14" opacity="0.8"/>
+  <rect x="897" y="0"  width="3"  height="22" fill="#39FF14" opacity="0.8"/>
+  <!-- Corner brackets — bottom left -->
+  <rect x="0"   y="197" width="22" height="3"  fill="#39FF14" opacity="0.4"/>
+  <rect x="0"   y="178" width="3"  height="22" fill="#39FF14" opacity="0.4"/>
+  <!-- Corner brackets — bottom right -->
+  <rect x="878" y="197" width="22" height="3"  fill="#39FF14" opacity="0.4"/>
+  <rect x="897" y="178" width="3"  height="22" fill="#39FF14" opacity="0.4"/>
+
+  <!-- Decorative side tags -->
+  <text x="30" y="106" font-family="'Courier New', monospace" font-size="18"
+        fill="#39FF14" opacity="0.35">&lt;&gt;</text>
+  <text x="832" y="106" font-family="'Courier New', monospace" font-size="18"
+        fill="#39FF14" opacity="0.35">:&gt;</text>
+
+  <!-- TITLE -->
+  <text x="450" y="88"
+        font-family="'Courier New', monospace"
+        font-size="68"
+        font-weight="bold"
+        fill="#39FF14"
+        text-anchor="middle"
+        letter-spacing="6"
+        filter="url(#glowStrong)">
+    beto.zip
+    <animate attributeName="opacity"
+             values="1;0.88;1;0.93;1;0.9;1"
+             dur="4s"
+             repeatCount="indefinite"/>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="450" y="116"
+        font-family="'Courier New', monospace"
+        font-size="14"
+        fill="#a0ffa0"
+        text-anchor="middle"
+        letter-spacing="5"
+        filter="url(#glow)">
+    AI &amp; SYSTEMS DEVELOPER
+  </text>
+
+  <!-- Loading label -->
+  <text x="250" y="144"
+        font-family="'Courier New', monospace"
+        font-size="11"
+        fill="#39FF14"
+        opacity="0.6"
+        letter-spacing="1">... extracting beto.zip_</text>
+
+  <!-- Bar track -->
+  <rect x="250" y="150" width="400" height="10"
+        fill="none" stroke="#39FF14" stroke-width="1.5" opacity="0.5"/>
+  <!-- Bar fill animated -->
+  <rect x="252" y="152" width="0" height="6" fill="#39FF14" opacity="0.9">
+    <animate attributeName="width"
+             values="0;320;120;380;260;396;396"
+             keyTimes="0;0.3;0.45;0.65;0.8;0.95;1"
+             dur="3.5s"
+             repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Bottom tagline -->
+  <text x="450" y="184"
+        font-family="'Courier New', monospace"
+        font-size="10"
+        fill="#39FF14"
+        text-anchor="middle"
+        opacity="0.3"
+        letter-spacing="6">
+    ALGOTRADING · AUTOMATION · AI AGENTS
+  </text>
+
+</svg>
