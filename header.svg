@@ -103,7 +103,7 @@
     <animate attributeName="width"
              values="0;320;120;380;260;396;396"
              keyTimes="0;0.3;0.45;0.65;0.8;0.95;1"
-             dur="3.5s"
+             dur="6s"
              repeatCount="indefinite"/>
   </rect>
 
